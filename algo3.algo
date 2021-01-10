@@ -1,0 +1,58 @@
+PROCEDURE dot_product(v1[],v2[]:integer)
+VAR
+    ps:integer
+BEGIN
+ps=0;
+for(var i=0;i<v1.length;i++){
+    for(var j=0;j<v2.length;j++)
+    ps+=v1[i]*v2[j];
+}
+if(ps==0){
+write("orthogonal vectors");
+}else
+write("non orthogonal vectors");
+END
+
+ALGORITHM check_orthogonal
+VAR
+    var vector1[],vector2[]:integer
+BEGIN
+    write(vector1[]);
+    write(vector2[]);
+    dot_product(vector1[],vector2[]);
+END
+
+
+FUNCTION dot_product2(var v1[],v2[]:integer) : BOOLEAN
+VAR
+    IsOrthogonal:BOOLEAN;
+    ps:INTEGER;
+BEGIN
+    ps=0    
+    for(var i=0;i<v1.length;i++){
+    for(var j=0;j<v2.length;j++)
+    ps+=v1[i]*v2[j];
+}
+if(ps==0){
+IsOrthogonal=true;
+}else
+IsOrthogonal=false;}
+    RETURN IsOrthogonal ;
+END
+
+
+
+
+
+ALGORITHM check_orthogonal2
+var vector1[],vector2[]:integer
+BEGIN
+    write(vector1[]);
+    write(vector2[]);
+   if (dot_product2(vector1[],vector2[])){
+       write("orthogonal");
+   }else
+       write("non orthogonal");
+   
+
+END
